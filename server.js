@@ -67,7 +67,7 @@ io.on("connection", async (socket) => {
         name: username || "Player_" + Math.floor(Math.random() * 1000),
         avatar: avatar || null
     };
-    console.log(`📡 ${players[socket.id].name} connected (${socket.id})`);
+    console.log(`${players[socket.id].name} connected (${socket.id})`);
     // ensure no player has invalid position before sharing
     Object.values(players).forEach(p => {
         if (!p.position || [p.position.x, p.position.y, p.position.z].some(v => typeof v !== 'number')) {

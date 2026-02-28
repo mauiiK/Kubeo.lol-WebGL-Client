@@ -11,3 +11,7 @@ Change all endpoints to assets from your domain
 
 Now do node server.js
 And you're done!
+
+Oh yeah ps sudo ufw allow 3000 (or iptables if debian)
+then proxy pass it so it knows to run on a domain
+you may need to allow cors in server conf, I didn't..

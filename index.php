@@ -724,7 +724,7 @@ const tryMultiplayer = cb => {
             console.warn("[UnNET] Singleplayer", e);
             cb();
         });
-        STATE.socket.on("disconnect", r => console.warn("❌ Disconnected:", r));
+        STATE.socket.on("disconnect", r => console.warn("Disconnected:", r));
     } catch (e) {
         STATE.multiplayerEnabled = false;
         console.warn("[NETErr] Multiplayer failed:", e);

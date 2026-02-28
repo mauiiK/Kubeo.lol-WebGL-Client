@@ -75,7 +75,7 @@ io.on("connection", async (socket) => {
             p.position = { x: 0, y: SPAWN_HEIGHT, z: 0 };
         }
     });
-    console.log("🔍 Sending currentPlayers:", Object.keys(players), Object.values(players).map(p => ({id: p.id, name: p.name, position: p.position})));
+    console.log("Sending currentPlayers:", Object.keys(players), Object.values(players).map(p => ({id: p.id, name: p.name, position: p.position})));
     socket.emit("currentPlayers", players);
     socket.broadcast.emit("newPlayer", players[socket.id]);
     io.emit("chatMessage", { sender: "[SERVER]", text: `${players[socket.id].name} has joined the game!` });
